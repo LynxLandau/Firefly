@@ -9,6 +9,7 @@ import FontSetup from "@components/features/FontSetup.astro";
 import MusicManager from "@components/features/MusicManager.astro";
 import SakuraEffect from "@components/features/SakuraEffect.astro";
 import ConfigCarrier from "@components/layout/ConfigCarrier.astro";
+import Analytics from "@vercel/analytics/astro";
 
 import {
 	analyticsConfig,
@@ -119,6 +120,7 @@ const siteLang = lang.replace("_", "-");
             />
     )}
     <VercelSpeedInsights />
+    <Analytics />
 
     <title>{pageTitle}</title>
     <meta
@@ -411,7 +413,7 @@ const siteLang = lang.replace("_", "-");
               wallpaperWrapper.classList.remove("wallpaper-overlay");
               wallpaperWrapper.classList.add("wallpaper-fullscreen");
               const isMobile = window.innerWidth < 1024;
-              // 移动端非首页时隐藏壁纸（与横幅模式一致）
+              // 移动端非首页时隐藏壁纸（与横幅模式��致）
               if (isMobile && !isHomePage) {
                 wallpaperWrapper.style.display = "none";
                 wallpaperWrapper.classList.add("mobile-hide-banner");
@@ -1616,7 +1618,7 @@ function disableAnimation() {
     updateSidebarStickySpacing();
   }
 
-  // 根据当前页面实际可见的顶部组件与滚动位置，动态更新侧边栏 sticky 间距
+  // 根据当前页面实际可见的���部组件与滚��位置，动态更新侧边栏 sticky 间距
   function updateSidebarStickySpacing() {
     const scrollTop = document.documentElement.scrollTop || window.scrollY || 0;
     const isScrolled = scrollTop > 2;
