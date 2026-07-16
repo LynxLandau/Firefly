@@ -3,6 +3,7 @@ import GoogleAnalytics from "@components/analytics/GoogleAnalytics.astro";
 import La51Analytics from "@components/analytics/La51Analytics.astro";
 import MicrosoftClarity from "@components/analytics/MicrosoftClarity.astro";
 import UmamiAnalytics from "@components/analytics/UmamiAnalytics.astro";
+import VercelSpeedInsights from "@components/analytics/VercelSpeedInsights.astro";
 import FancyboxManager from "@components/features/FancyboxManager.astro";
 import FontSetup from "@components/features/FontSetup.astro";
 import MusicManager from "@components/features/MusicManager.astro";
@@ -117,6 +118,7 @@ const siteLang = lang.replace("_", "-");
             screenRecord={analyticsConfig.la51Analytics?.screenRecord}
             />
     )}
+    <VercelSpeedInsights />
 
     <title>{pageTitle}</title>
     <meta
@@ -614,7 +616,7 @@ const siteLang = lang.replace("_", "-");
       @apply transition-all duration-300;
     }
 
-    /* 全屏壁纸模式 */
+    /* 全屏��纸模式 */
     .no-banner-layout #wallpaper-wrapper.wallpaper-fullscreen {
       height: 100vh;
       min-height: 100vh;
