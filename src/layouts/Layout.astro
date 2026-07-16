@@ -3,11 +3,13 @@ import GoogleAnalytics from "@components/analytics/GoogleAnalytics.astro";
 import La51Analytics from "@components/analytics/La51Analytics.astro";
 import MicrosoftClarity from "@components/analytics/MicrosoftClarity.astro";
 import UmamiAnalytics from "@components/analytics/UmamiAnalytics.astro";
+import VercelSpeedInsights from "@components/analytics/VercelSpeedInsights.astro";
 import FancyboxManager from "@components/features/FancyboxManager.astro";
 import FontSetup from "@components/features/FontSetup.astro";
 import MusicManager from "@components/features/MusicManager.astro";
 import SakuraEffect from "@components/features/SakuraEffect.astro";
 import ConfigCarrier from "@components/layout/ConfigCarrier.astro";
+import Analytics from "@vercel/analytics/astro";
 
 import {
 	analyticsConfig,
@@ -117,6 +119,8 @@ const siteLang = lang.replace("_", "-");
             screenRecord={analyticsConfig.la51Analytics?.screenRecord}
             />
     )}
+    <VercelSpeedInsights />
+    <Analytics />
 
     <title>{pageTitle}</title>
     <meta
@@ -409,7 +413,7 @@ const siteLang = lang.replace("_", "-");
               wallpaperWrapper.classList.remove("wallpaper-overlay");
               wallpaperWrapper.classList.add("wallpaper-fullscreen");
               const isMobile = window.innerWidth < 1024;
-              // 移动端非首页时隐藏壁纸（与横幅模式一致）
+              // 移动端非首页时隐藏壁纸（与横幅模式��致）
               if (isMobile && !isHomePage) {
                 wallpaperWrapper.style.display = "none";
                 wallpaperWrapper.classList.add("mobile-hide-banner");
@@ -614,7 +618,7 @@ const siteLang = lang.replace("_", "-");
       @apply transition-all duration-300;
     }
 
-    /* 全屏壁纸模式 */
+    /* 全屏��纸模式 */
     .no-banner-layout #wallpaper-wrapper.wallpaper-fullscreen {
       height: 100vh;
       min-height: 100vh;
@@ -1614,7 +1618,7 @@ function disableAnimation() {
     updateSidebarStickySpacing();
   }
 
-  // 根据当前页面实际可见的顶部组件与滚动位置，动态更新侧边栏 sticky 间距
+  // 根据当前页面实际可见的���部组件与滚��位置，动态更新侧边栏 sticky 间距
   function updateSidebarStickySpacing() {
     const scrollTop = document.documentElement.scrollTop || window.scrollY || 0;
     const isScrolled = scrollTop > 2;
