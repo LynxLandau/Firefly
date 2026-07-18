@@ -39,11 +39,5 @@ export const profileConfig: ProfileConfig = {
 			url: "mihoyo.LynxLandau@gmail.com",
 			showName: false,
 		},
-		{
-			name: "RSS",
-			icon: "fa7-solid:rss",
-			url: "/rss/",
-			showName: false,
-		},
 	],
 };
