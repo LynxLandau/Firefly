@@ -12,7 +12,7 @@ export const siteConfig: SiteConfig = {
 	subtitle: "为了去远方",
 
 	// 站点 URL
-	site_url: "https://bellsaxon.auvi.top",
+	site_url: "https://cat.123h.top",
 
 	// 站点描述
 	description:
