@@ -6,21 +6,21 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "Lynx Landau",
+	title: "Pillow Cat",
 
 	// 站点副标题
-	subtitle: "为了去远方",
+	subtitle: "Pillow Cat的个人博客",
 
 	// 站点 URL
 	site_url: "https://cat.123h.top",
 
 	// 站点描述
 	description:
-		"Lynx的个人博客",
+		"Pillow Cat的个人博客",
 
 	// 站点关键词
 	keywords: [
-		"Lynx",
+		"Pillow Cat",
 		"Fuwari",
 		"Astro",
 		"ACGN",
@@ -78,7 +78,7 @@ export const siteConfig: SiteConfig = {
 			value: "assets/images/firefly.png",
 		},
 		// 导航栏标题
-		title: "Lynx",
+		title: "Pillow Cat",
 		// 全宽导航栏，导航栏是否占满屏幕宽度
 		widthFull: false,
 		// 导航菜单对齐方式，left：左对齐，center：居中
